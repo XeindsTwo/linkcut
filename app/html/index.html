@@ -1,0 +1,16 @@
+@include('components/_head.html', {
+title: 'Just Agency'
+})
+
+<body class="body">
+@include('components/_header.html')
+<main>
+  @include('home/_home.html')
+  @include('home/_benefits.html')
+  @include('home/_bloggers.html')
+  @include('home/_clients.html')
+  @include('home/_contacts.html')
+</main>
+@include('components/_footer.html')
+<script src="js/main.min.js" type="module"></script>
+</body>

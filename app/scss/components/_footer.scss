@@ -1,3 +1,29 @@
 .footer {
+  padding: 22px 0;
 
+  &__inner {
+    @include flex-between-center-gap(30);
+  }
+
+  &__list {
+    @include flex-align-center(30);
+  }
+
+  &__link {
+    color: $white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 2px;
+    font-weight: 500;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: $accent150;
+    }
+
+    &:focus {
+      border-color: $accent150;
+      color: rgba($white, .6);
+    }
+  }
 }

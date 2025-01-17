@@ -1,0 +1,31 @@
+.services {
+  &__title {
+    margin-bottom: 42px;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    border-radius: 30px;
+    padding: 55px 38px 40px;
+    background-color: #0A0F1A;
+    border: 1px solid #121824;
+  }
+
+  &__icon {
+    @include objectCoverBg;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+}

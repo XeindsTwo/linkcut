@@ -1,15 +1,56 @@
 <section class="contacts">
   <div class="container">
-    <div class="contacts__content">
-      <h2 class="contacts__title title-section title-section--center title-section--big">
-        Мы готовы помочь в развитии вам, просто дайте знать об этом
-      </h2>
-      <p class="contacts__text">
-        Мы реализуем рекламные проекты у блогеров, создавая решения для достижения наилучшего результата. Наши проекты
-        повышают лояльность к бренду и увеличивают продажи.
-      </p>
-      <a class="contacts__link btn" href="https://t.me/ptichezz_adv" target="_blank">Написать нам</a>
+    <div class="contacts__inner">
+      <div class="contacts__content">
+        <h2 class="contacts__title title-section">
+          You can leave your application in any way convenient for you
+        </h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <p class="contacts__label">Address location</p>
+            <a class="contacts__link" href="https://maps.app.goo.gl/V3RCGuznXwC7qYJY9" target="_blank">
+              70 Rue de l'Église, 75015 Paris, France
+            </a>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__label">Telephone number</p>
+            <a class="contacts__link" href="tel:+33145678910">
+              +33 1 45 67 89 10
+            </a>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__label">Mailing address</p>
+            <a class="contacts__link" href="mailto:support@skinwporte.com">
+              support@skinwporte.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <form class="contacts__form" method="post">
+        <h3 class="contacts__subtitle">Write to us</h3>
+        <ul class="contacts__fields">
+          <li class="contacts__field">
+            <label class="label" for="name">Your name</label>
+            <input class="input" type="text" id="name" name="name" placeholder="Enter your name" required maxlength="255">
+          </li>
+          <li class="contacts__field">
+            <label class="label" for="phone">Your phone</label>
+            <input class="input" type="text" id="phone" name="phone" placeholder="Enter your phone number"
+                   required maxlength="255">
+          </li>
+          <li class="contacts__field">
+            <label class="label" for="email">Your email</label>
+            <input class="input" type="email" id="email" name="email" placeholder="Enter your email"
+                   required maxlength="255">
+          </li>
+          <li class="contacts__field">
+            <label class="label" for="message">Your message</label>
+            <textarea class="input input--textarea" id="message" name="message" placeholder="Enter your message"
+                   required maxlength="2000"></textarea>
+          </li>
+        </ul>
+        <button class="contacts__btn btn" type="submit">Submit</button>
+      </form>
     </div>
   </div>
-  <img class="contacts__decor" src="images/bg-end.webp" alt="decor background">
 </section>

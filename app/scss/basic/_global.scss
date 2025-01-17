@@ -10,10 +10,10 @@
   font-family: $inter;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.45;
+  line-height: 1.55;
   letter-spacing: -0.18px;
-  color: $white;
-  background-color: #060605;
+  color: rgba($white, .65);
+  background-color: #060B16;
   position: relative;
   overflow-x: hidden;
 
@@ -44,21 +44,18 @@
 }
 
 .container {
-  max-width: 1650px;
+  max-width: 1425px;
   padding: 0 15px;
   margin: 0 auto;
   width: 100%;
 
-  &--small {
-    max-width: 1420px;
+  &--big {
+    max-width: 1630px;
   }
 }
 
 .indent {
-  margin-bottom: 150px;
-  @include r($desktop) {
-    margin-bottom: 120px;
-  }
+  margin-bottom: 124px;
   @media (max-width: 940px) {
     margin-bottom: 100px;
   }
@@ -85,14 +82,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(#c9ff2a, .2);
+  background-color: rgba($accent, .2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #c9ff2a;
+  background-color: $accent;
 }
 
 ::selection {
-  background-color: #c9ff2a;
-  color: #21211A;
+  background-color: $accent150;
+  color: $white;
 }

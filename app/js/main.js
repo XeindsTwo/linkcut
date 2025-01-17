@@ -1,57 +1,27 @@
-const html = document.documentElement;
-const menuBtn = document.querySelector('.menu-btn');
-const headerNav = document.querySelector('.header__mobile');
-const anchors = document.querySelectorAll('a.header__link.mobile');
-
-menuBtn.addEventListener('click', () => {
-  menuBtn.blur();
-  html.classList.toggle('active');
-  menuBtn.classList.toggle('active');
-  headerNav.classList.toggle('active');
+const swiper = new Swiper('.team__swiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  initialSlide: 2,
+  on: {
+    init: function () {
+      updateVisibleSlides(this);
+    },
+    slideChange: function () {
+      updateVisibleSlides(this);
+    },
+    transitionStart: function () {
+      updateVisibleSlides(this);
+    },
+  },
 });
 
-function scrollToTarget(targetId) {
-  const targetSection = document.querySelector(targetId);
-  if (targetSection) {
-    html.classList.remove('active');
-    headerNav.classList.remove('active');
-    menuBtn.classList.remove('active');
-    setTimeout(() => {
-      const targetOffset = targetSection.offsetTop - 30;
-      window.scrollTo({top: targetOffset, behavior: 'smooth'});
-    }, 400);
-  }
-}
+function updateVisibleSlides(swiper) {
+  swiper.slides.forEach(slide => slide.classList.remove('visible-slide'));
 
-function handleAnchorClick(event) {
-  event.preventDefault();
-  const href = this.getAttribute('href');
-  const hrefParts = href.split('#');
-  if (hrefParts.length === 2) {
-    const targetId = '#' + hrefParts[1];
-    scrollToTarget(targetId);
-  }
-}
-
-for (const anchor of anchors) {
-  anchor.addEventListener('click', handleAnchorClick);
-  anchor.addEventListener('touchstart', handleAnchorClick, {passive: true});
-}
-
-document.querySelectorAll(".desktop").forEach(link => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const targetId = link.getAttribute("href").slice(1);
-    const targetSection = document.getElementById(targetId);
-
-    if (targetSection) {
-      const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - 40;
-
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth"
-      });
-    }
+  const visibleSlides = swiper.slides.filter((slide, index) => {
+    const slideIndex = index - swiper.realIndex;
+    return slideIndex >= 0 && slideIndex < swiper.params.slidesPerView;
   });
-});
+
+  visibleSlides.forEach(slide => slide.classList.add('visible-slide'));
+}

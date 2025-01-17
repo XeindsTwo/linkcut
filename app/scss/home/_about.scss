@@ -1,0 +1,38 @@
+.about {
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__item {
+    padding: 55px 100px 50px 50px;
+    background-color: #0A0F1A;
+    border-radius: 30px;
+    border: 1px solid #192233;
+
+    &--long {
+      @include bg;
+      background-image: url("../images/about-bg.png");
+      min-height: 300px;
+      grid-column: span 2;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 18px;
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: $white;
+    max-width: 465px;
+  }
+
+  &__description {
+    max-width: 540px;
+  }
+}

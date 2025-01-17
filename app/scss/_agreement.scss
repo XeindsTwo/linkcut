@@ -1,11 +1,27 @@
 .agreement {
   margin-bottom: 120px;
+  @include r($desktop) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 920px) {
+    margin-bottom: 60px;
+  }
 
   &__head {
     @include flex-column(25);
     padding-bottom: 40px;
     border-bottom: 1px solid #2a3750;
     margin-bottom: 72px;
+    @media (max-width: 1100px) {
+      margin-bottom: 54px;
+    }
+    @media (max-width: 920px) {
+      margin-bottom: 44px;
+    }
+    @include r($tablet) {
+      padding-bottom: 36px;
+      margin-bottom: 36px;
+    }
   }
 
   &__title {
@@ -15,19 +31,59 @@
     letter-spacing: -1.28px;
     color: $white;
     font-family: $vela;
+    @include r($desktop) {
+      font-size: 58px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 54px;
+    }
+    @media (max-width: 920px) {
+      font-size: 48px;
+      letter-spacing: -1px;
+    }
+    @include r($tablet) {
+      font-size: 44px;
+      letter-spacing: -0.8px;
+    }
+    @include r($sm) {
+      font-size: 42px;
+      letter-spacing: -0.6px;
+    }
+    @include r($phone) {
+      font-size: 40px;
+      letter-spacing: -0.4px;
+    }
+    @media (max-width: 420px) {
+      font-size: 36px;
+    }
+    @media (max-width: 400px) {
+      font-size: 34px;
+    }
   }
 
   &__subtext {
     color: rgba($white, .8);
+    @media (max-width: 420px) {
+      font-size: 15px;
+    }
   }
 
   &__list {
     @include flex-column(64);
+    @include r($tablet) {
+      gap: 50px;
+    }
+    @include r($phone) {
+      font-size: 15px;
+    }
   }
 
   &__item {
     @include flex-column(25);
     color: rgba($white, .7);
+    @media (max-width: 1100px) {
+      gap: 18px;
+    }
   }
 
   &__subtitle {
@@ -35,6 +91,24 @@
     font-size: 42px;
     font-weight: 600;
     font-family: $velaSemiBold;
+    @include r($desktop) {
+      font-size: 36px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 32px;
+    }
+    @media (max-width: 920px) {
+      font-size: 30px;
+    }
+    @include r($tablet) {
+      font-size: 28px;
+    }
+    @include r($sm) {
+      font-size: 26px;
+    }
+    @media (max-width: 420px) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -52,6 +126,21 @@
           border-radius: 50%;
           background-color: rgba($white, .7);
         }
+      }
+    }
+
+    a {
+      border-radius: 5px;
+      border: 1px solid transparent;
+      transition: color .4s, border .4s;
+
+      &:hover {
+        color: $accent150;
+      }
+
+      &:focus {
+        border-color: $accent150;
+        color: $white;
       }
     }
   }

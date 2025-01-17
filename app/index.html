@@ -14,27 +14,109 @@
 </head>
 
 <body class="body">
+<img class="bg" src="images/bg-page.png" alt="">
 <header class="header">
-
+  <div class="container container--big">
+    <div class="header__inner">
+      <img src="images/logo.svg" width="110" height="24" alt="logo LinkCut">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li>
+            <a class="header__link desktop" href="#about">About us</a>
+          </li>
+          <li>
+            <a class="header__link desktop" href="#services">Our services</a>
+          </li>
+          <li>
+            <a class="header__link desktop" href="#plan">Write to us</a>
+          </li>
+          <li>
+            <a class="header__link desktop" href="#team">Our team</a>
+          </li>
+          <li>
+            <a class="header__link desktop" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-btn menu-btn--header" type="button">
+        <span class="menu-btn__line"></span>
+        <span class="sr-only">Interact with menu</span>
+      </button>
+    </div>
+  </div>
 </header>
+<div class="header__mobile">
+  <nav class="header__nav mobile">
+    <ul class="header__list">
+      <li>
+        <a class="header__link mobile" href="#about" tabindex="-1">About us</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#services" tabindex="-1">Our services</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#plan" tabindex="-1">Write to us</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#team" tabindex="-1">Our team</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#contacts" tabindex="-1">Contacts</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 <main>
   <section class="home indent" id="home">
   <div class="container">
-    <h1 class="home__title">
-      Увлеченная команда видеоблогеров и профессионалов рекламы
-    </h1>
-    <p class="home__text">
-      Мы реализуем рекламные проекты у блогеров, создавая решения для достижения наилучшего результата. Наши проекты
-      повышают лояльность к бренду и увеличивают продажи.
-    </p>
-    <div class="home__wrapper">
-      <div class="home__links">
-        <a class="home__link btn" href="https://t.me/ptichezz_adv" target="_blank">Написать нам</a>
-        <a class="home__link btn btn--dark desktop" href="#benefits" target="_blank">Узнать больше</a>
+    <div class="home__inner">
+      <div class="home__content">
+        <h1 class="home__title">
+          Boost Your Business with Effortless Short Links
+        </h1>
+        <p class="home__text">
+          Transform long URLs into powerful, trackable links that drive engagement and streamline your digital strategy.
+        </p>
+        <a class="btn" href="#" target="_blank">Start working</a>
       </div>
-      <img class="home__decor" src="images/home-decor.webp" alt="decor background">
-      <img class="home__grid" src="images/grid.webp" alt="decor grid">
+      <img class="home__img" src="images/swap-home.png" width="640" height="640" alt="">
     </div>
+  </div>
+</section>
+  <section class="about indent" id="about">
+  <div class="container">
+    <h2 class="about__title title-section title-section--center">All about us</h2>
+    <ul class="about__items">
+      <li class="about__item">
+        <h3 class="about__subtitle">
+          At LinkCut, we believe in the power of simplicity
+        </h3>
+        <p class="about__description">
+          In a world where businesses are constantly battling for attention, long, unwieldy URLs can be a roadblock to
+          engagement. That’s why we’ve made it our mission to streamline the digital experience by transforming long,
+          complex links into short, easy-to-share URLs that help businesses stand out.
+        </p>
+      </li>
+      <li class="about__item">
+        <h3 class="about__subtitle">
+          Founded with the goal of simplifying the digital landscape, Link Cut offers more than just URL
+        </h3>
+        <p class="about__description">
+          We provide businesses with powerful tools to track and optimize their links, giving them insights into
+          customer behavior and engagement. Our platform is built for businesses of all sizes, from startups to
+          established enterprises, who want to improve their online.
+        </p>
+      </li>
+      <li class="about__item about__item--long">
+        <h3 class="about__subtitle about__subtitle--long">
+          We’re here to make your digital life easier, one short link at a time
+        </h3>
+        <p class="about__description about__description--long">
+          Whether you're sharing a link on social media, in a marketing campaign, or in your internal communications,
+          LinkCut ensures that your URLs are clean, professional, and tailored to your needs
+        </p>
+      </li>
+    </ul>
   </div>
 </section>
   <section class="services indent" id="services">
@@ -75,6 +157,21 @@
         </p>
       </li>
     </ul>
+  </div>
+</section>
+  <section class="plan indent" id="plan">
+  <div class="container">
+    <div class="plan__inner">
+      <div class="plan__content">
+        <h2 class="plan__title title-section">One Simple Plan for All Your Needs</h2>
+        <p class="plan__text">
+          At LinkCut, we believe in keeping things simple and transparent. That’s why we offer one all-inclusive
+          subscription that gives you access to all of our powerful features — no hidden fees, no complicated tiers.
+        </p>
+        <a class="btn" href="" target="_blank">For just $69/month</a>
+      </div>
+      <img class="plan__img" src="images/plan.png" alt="plan needs">
+    </div>
   </div>
 </section>
   <section class="team indent" id="team">
@@ -164,7 +261,7 @@
     </div>
   </div>
 </section>
-  <section class="contacts">
+  <section class="contacts" id="contacts">
   <div class="container">
     <div class="contacts__inner">
       <div class="contacts__content">

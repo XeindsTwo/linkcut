@@ -3,6 +3,10 @@
 
   &__inner {
     @include flex-between-center-gap(30);
+    @include r($sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__list {

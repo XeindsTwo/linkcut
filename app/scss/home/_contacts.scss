@@ -1,23 +1,62 @@
 .contacts {
   margin-bottom: 160px;
+  @media (max-width: 1250px) {
+    margin-bottom: 130px;
+  }
+  @media (max-width: 1100px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 960px) {
+    margin-bottom: 90px;
+  }
+  @include r($tablet) {
+    margin-bottom: 80px;
+  }
+  @include r($phone) {
+    margin-bottom: 70px;
+  }
 
   &__inner {
     @include flex-between-center-gap(90);
     align-items: flex-start;
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 60px;
+    }
+    @include r($sm) {
+      margin: 0 -4px;
+    }
   }
 
   &__content {
     @include flex-column(48);
     max-width: 580px;
+    @media (max-width: 1100px) {
+      align-items: center;
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__title {
     color: $white;
+    @media (max-width: 1100px) {
+      max-width: 580px;
+    }
   }
 
   &__list {
     @include flex-column(15);
     max-width: 370px;
+    @media (max-width: 1100px) {
+      max-width: 100%;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -28,6 +67,17 @@
     font-size: 18px;
     font-weight: 500;
     @include flex-column(6);
+    @include r($desktop) {
+      font-size: 17px;
+    }
+    @media (max-width: 1100px) {
+      align-items: center;
+      max-width: 350px;
+      width: 100%;
+    }
+    @media (max-width: 720px) {
+      font-size: 16px;
+    }
   }
 
   &__label {
@@ -57,6 +107,24 @@
     border: 1px solid #29334d;
     border-radius: 30px;
     padding: 35px 52px 55px;
+    @media (max-width: 1300px) {
+      padding: 35px 43px 50px;
+    }
+    @include r($desktop) {
+      padding: 36px 35px 45px;
+    }
+    @media (max-width: 1100px) {
+      max-width: 100%;
+    }
+    @include r($sm) {
+      border-radius: 25px;
+    }
+    @include r($phone) {
+      padding: 36px 28px 40px;
+    }
+    @media (max-width: 400px) {
+      padding: 36px 25px 40px;
+    }
   }
 
   &__subtitle {
@@ -65,15 +133,30 @@
     margin-bottom: 30px;
     text-align: center;
     color: $white;
+    @media (max-width: 1100px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__fields {
     @include flex-column(30);
     margin-bottom: 36px;
+    @media (max-width: 1100px) {
+      display: grid;
+      text-align: left;
+      grid-gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 740px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__btn {
     max-width: 100%;
     width: 100%;
+    @media (max-width: 1100px) {
+      padding: 18px 20px;
+    }
   }
 }

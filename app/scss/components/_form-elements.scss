@@ -7,6 +7,9 @@
   @include r($tablet) {
     margin-bottom: 8px;
   }
+  @include r($phone) {
+    font-size: 15px;
+  }
 }
 
 .input {
@@ -18,6 +21,9 @@
   border: 1px solid #171C25;
   background-color: #0F141D;
   transition: border .4s, color .4s;
+  @include r($phone) {
+    font-size: 15px;
+  }
 
   &:hover {
     border-color: $accent;

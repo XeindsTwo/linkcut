@@ -1,3 +1,30 @@
 .home {
+  margin-top: -40px;
 
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 640px;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-family: $vela;
+    margin-bottom: 30px;
+    line-height: 1.18;
+    max-width: 760px;
+    color: $white;
+    letter-spacing: -1.28px;
+  }
+
+  &__text {
+    max-width: 585px;
+    margin-bottom: 48px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+  }
 }

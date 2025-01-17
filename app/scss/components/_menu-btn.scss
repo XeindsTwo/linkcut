@@ -21,13 +21,13 @@
     background-color: $accent;
 
     .menu-btn__line, .menu-btn__line::after, .menu-btn__line::before {
-      background-color: $black;
+      background-color: $white;
     }
   }
 
   &:focus {
     background-color: transparent;
-    border-color: $accent;
+    border-color: $accent150;
 
     .menu-btn__line, .menu-btn__line::after, .menu-btn__line::before {
       background-color: $white;
@@ -35,8 +35,9 @@
   }
 
   &--header {
-    @media (max-width: 1060px) {
+    @media (max-width: 840px) {
       display: flex;
+      margin-left: auto;
     }
   }
 

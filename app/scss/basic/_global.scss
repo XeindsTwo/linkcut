@@ -1,5 +1,6 @@
 .html {
   position: relative;
+  overflow-x: hidden;
 
   &.active {
     overflow: hidden;
@@ -75,6 +76,15 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.bg {
+  @include objectCoverBg;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 ::-webkit-scrollbar {

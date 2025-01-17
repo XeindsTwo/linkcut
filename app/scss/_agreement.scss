@@ -1,0 +1,58 @@
+.agreement {
+  margin-bottom: 120px;
+
+  &__head {
+    @include flex-column(25);
+    padding-bottom: 40px;
+    border-bottom: 1px solid #2a3750;
+    margin-bottom: 72px;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -1.28px;
+    color: $white;
+    font-family: $vela;
+  }
+
+  &__subtext {
+    color: rgba($white, .8);
+  }
+
+  &__list {
+    @include flex-column(64);
+  }
+
+  &__item {
+    @include flex-column(25);
+    color: rgba($white, .7);
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: 42px;
+    font-weight: 600;
+    font-family: $velaSemiBold;
+  }
+
+  &__text {
+    ul {
+      margin-left: 7px;
+
+      li {
+        @include flex-align-center(10);
+        display: flex;
+
+        &::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: rgba($white, .7);
+        }
+      }
+    }
+  }
+}

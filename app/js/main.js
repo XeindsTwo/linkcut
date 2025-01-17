@@ -25,9 +25,10 @@ menuLinks.forEach((menuLink) => {
 });
 
 const swiper = new Swiper('.team__swiper', {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  initialSlide: 2,
+  navigation: {
+    nextEl: '.team__btn--next',
+    prevEl: '.team__btn--prev',
+  },
   on: {
     init: function () {
       updateVisibleSlides(this);
@@ -39,6 +40,28 @@ const swiper = new Swiper('.team__swiper', {
       updateVisibleSlides(this);
     },
   },
+  breakpoints: {
+    2000: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      initialSlide: 2,
+    },
+    1400: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      initialSlide: 2,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      initialSlide: 0,
+    },
+    590: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      initialSlide: 0,
+    }
+  }
 });
 
 function updateVisibleSlides(swiper) {

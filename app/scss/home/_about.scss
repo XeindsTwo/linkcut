@@ -1,12 +1,15 @@
 .about {
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 46px;
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -14,12 +17,54 @@
     background-color: #0A0F1A;
     border-radius: 30px;
     border: 1px solid #192233;
+    @media (max-width: 1300px) {
+      padding: 50px 80px 40px 35px;
+    }
+    @include r($desktop) {
+      border-radius: 26px;
+      padding: 50px 80px 40px 28px;
+    }
+    @media (max-width: 1100px) {
+      padding-right: 60px;
+    }
+    @media (max-width: 500px) {
+      padding: 44px 30px 35px 26px;
+      border-radius: 22px;
+    }
+    @include r($phone) {
+      padding: 36px 24px 34px;
+    }
 
     &--long {
       @include bg;
       background-image: url("../images/about-bg.png");
       min-height: 300px;
       grid-column: span 2;
+      @media (max-width: 1100px) {
+        min-height: 280px;
+      }
+      @media (max-width: 980px) {
+        grid-column: span 1;
+      }
+      @media (max-width: 860px) {
+        min-height: 260px;
+      }
+      @media (max-width: 580px) {
+        min-height: 300px;
+        background-position: -12cm center;
+      }
+      @media (max-width: 530px) {
+        background-position: -14cm center;
+      }
+      @include r($phone) {
+        background-position: -15cm center;
+      }
+      @media (max-width: 440px) {
+        background-position: -16cm center;
+      }
+      @media (max-width: 420px) {
+        background-position: -18cm center;
+      }
     }
   }
 
@@ -30,9 +75,28 @@
     font-weight: 600;
     color: $white;
     max-width: 465px;
+    @media (max-width: 1300px) {
+      font-size: 26px;
+    }
+    @media (max-width: 1140px) {
+      font-size: 24px;
+    }
+    @media (max-width: 980px) {
+      max-width: 550px;
+    }
+    @media (max-width: 680px) {
+      font-size: 22px;
+    }
   }
 
   &__description {
     max-width: 540px;
+    @media (max-width: 980px) {
+      max-width: 580px;
+    }
+
+    &--long {
+      max-width: 540px;
+    }
   }
 }

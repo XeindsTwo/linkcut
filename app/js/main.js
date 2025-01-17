@@ -1,6 +1,8 @@
 import {setupMobileMenu} from "./mobileMenu.js";
+import {submitForm} from "./submitForm.js";
 
 setupMobileMenu();
+submitForm();
 
 function scrollToSection(event) {
   event.preventDefault();
